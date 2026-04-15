@@ -1,16 +1,7 @@
 "use client";
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-
-const hours = [
-  { day: "Monday", time: "11:00 AM – 8:00 PM" },
-  { day: "Tuesday", time: "11:00 AM – 9:30 PM" },
-  { day: "Wednesday", time: "11:00 AM – 9:30 PM" },
-  { day: "Thursday", time: "11:00 AM – 9:30 PM" },
-  { day: "Friday", time: "11:00 AM – 11:30 PM" },
-  { day: "Saturday", time: "11:00 AM – 11:30 PM" },
-  { day: "Sunday", time: "11:00 AM – 8:00 PM" },
-];
+import { BUSINESS, HOURS, SITE_LINKS } from "@/lib/siteData";
 
 export default function Location() {
   const { ref, isVisible } = useScrollAnimation();
@@ -47,13 +38,13 @@ export default function Location() {
           {/* Hours & Info */}
           <div className="bg-white rounded-2xl shadow-xl p-8 sm:p-10 border border-amber-gold/10">
             <h3 className="font-heading text-3xl text-smoky-brown mb-6">
-              📍 1000 N Main Street
+              📍 {BUSINESS.addressLine1}
               <br />
-              <span className="text-xl text-smoky-light">Algonquin, IL</span>
+              <span className="text-xl text-smoky-light">{BUSINESS.addressLine2}</span>
             </h3>
 
             <div className="space-y-3 mb-8">
-              {hours.map((h) => (
+              {HOURS.map((h) => (
                 <div
                   key={h.day}
                   className={`flex justify-between items-center py-2 px-4 rounded-lg transition-colors ${
@@ -79,15 +70,28 @@ export default function Location() {
               ))}
             </div>
 
+            <div className="mb-8 rounded-2xl bg-cream p-5 text-sm text-smoky-light">
+              <p className="font-semibold uppercase tracking-[0.16em] text-smoky-brown">Reach us directly</p>
+              <a href={BUSINESS.phoneHref} className="mt-3 block hover:text-bbq-red transition-colors">
+                {BUSINESS.phoneDisplay}
+              </a>
+              <a href={`mailto:${BUSINESS.email}`} className="mt-2 block hover:text-bbq-red transition-colors">
+                {BUSINESS.email}
+              </a>
+              <a href={`mailto:${BUSINESS.cateringEmail}`} className="mt-2 block hover:text-bbq-red transition-colors">
+                {BUSINESS.cateringEmail}
+              </a>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href="tel:+18472612222"
+                href={BUSINESS.phoneHref}
                 className="flex-1 bg-smoky-brown text-amber-gold text-center px-6 py-3 rounded-full font-bold tracking-wide transition-all hover:scale-105"
               >
                 📞 Call Us
               </a>
               <a
-                href="https://www.google.com/maps/dir//1000+N+Main+St+Algonquin+IL"
+                href={SITE_LINKS.directions}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex-1 bg-amber-gold text-smoky-brown text-center px-6 py-3 rounded-full font-bold tracking-wide transition-all hover:scale-105"

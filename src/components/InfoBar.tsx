@@ -1,6 +1,7 @@
 "use client";
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { BUSINESS, HOURS } from "@/lib/siteData";
 
 export default function InfoBar() {
   const { ref, isVisible } = useScrollAnimation();
@@ -15,22 +16,22 @@ export default function InfoBar() {
           <span className="text-2xl">📍</span>
           <div>
             <p className="font-semibold text-amber-gold">Visit Us</p>
-            <p className="text-sm text-cream/80">1000 N Main St, Algonquin, IL</p>
+            <p className="text-sm text-cream/80">{BUSINESS.addressLine1}, Algonquin, IL</p>
           </div>
         </div>
         <div className="flex items-center justify-center gap-3" style={{ transitionDelay: "0.2s", opacity: isVisible ? 1 : 0, transform: isVisible ? "translateY(0)" : "translateY(20px)", transition: "all 0.6s ease" }}>
           <span className="text-2xl">🕐</span>
           <div>
-            <p className="font-semibold text-amber-gold">Hours Today</p>
-            <p className="text-sm text-cream/80">Mon–Thu 11am–9:30pm • Fri–Sat til 11:30pm</p>
+            <p className="font-semibold text-amber-gold">Weekly Hours</p>
+            <p className="text-sm text-cream/80">{HOURS[0].day} {HOURS[0].time} • Fri-Sat {HOURS[4].time}</p>
           </div>
         </div>
         <div className="flex items-center justify-center gap-3" style={{ transitionDelay: "0.3s", opacity: isVisible ? 1 : 0, transform: isVisible ? "translateY(0)" : "translateY(20px)", transition: "all 0.6s ease" }}>
-          <span className="text-2xl">📞</span>
+          <span className="text-2xl">✉️</span>
           <div>
-            <p className="font-semibold text-amber-gold">Call Us</p>
-            <a href="tel:+18472612222" className="text-sm text-cream/80 hover:text-amber-gold transition-colors">
-              (847) 261-2222
+            <p className="font-semibold text-amber-gold">Call or Email</p>
+            <a href={BUSINESS.phoneHref} className="text-sm text-cream/80 hover:text-amber-gold transition-colors">
+              {BUSINESS.phoneDisplay}
             </a>
           </div>
         </div>

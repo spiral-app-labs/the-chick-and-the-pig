@@ -11,6 +11,7 @@ import Catering from "@/components/Catering";
 import Location from "@/components/Location";
 import Social from "@/components/Social";
 import Footer from "@/components/Footer";
+import MobileOrderBar from "@/components/MobileOrderBar";
 
 export default function Home() {
   return (
@@ -28,6 +29,7 @@ export default function Home() {
       <Location />
       <Social />
       <Footer />
+      <MobileOrderBar />
     </main>
   );
 }

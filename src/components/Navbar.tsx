@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { SITE_LINKS } from "@/lib/siteData";
 
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
@@ -17,7 +18,6 @@ export default function Navbar() {
     { href: "#specials", label: "Daily Specials" },
     { href: "#menu", label: "Menu" },
     { href: "#sauces", label: "Sauces" },
-    { href: "#reviews", label: "Reviews" },
     { href: "#catering", label: "Catering" },
     { href: "#location", label: "Location" },
   ];
@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-2xl sm:text-3xl font-heading text-amber-gold tracking-wider group-hover:text-white transition-colors">
+          <span className="text-xl sm:text-3xl font-heading text-amber-gold tracking-[0.12em] group-hover:text-white transition-colors">
             THE CHICK & THE PIG
           </span>
         </Link>
@@ -49,12 +49,20 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://order.toasttab.com/online/thechickandthepig"
+            href={SITE_LINKS.toast}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-bbq-red hover:bg-red-700 text-white px-5 py-2.5 rounded-full font-bold text-sm tracking-wide transition-all hover:scale-105 shadow-lg"
           >
-            ORDER ONLINE
+            ORDER TOAST
+          </a>
+          <a
+            href={SITE_LINKS.giftCards}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-amber-gold transition-colors text-sm font-medium tracking-wide uppercase hover:text-white"
+          >
+            Gift Cards
           </a>
         </div>
 
@@ -102,12 +110,20 @@ export default function Navbar() {
             </a>
           ))}
           <a
-            href="https://order.toasttab.com/online/thechickandthepig"
+            href={SITE_LINKS.toast}
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-bbq-red text-white text-center px-5 py-3 rounded-full font-bold text-lg mt-4"
           >
-            ORDER ONLINE
+            ORDER TOAST
+          </a>
+          <a
+            href={SITE_LINKS.doorDash}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="block border border-amber-gold/30 text-amber-gold text-center px-5 py-3 rounded-full font-bold text-lg"
+          >
+            DOORDASH
           </a>
         </div>
       </div>
