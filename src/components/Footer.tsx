@@ -1,3 +1,5 @@
+import { BUSINESS, SITE_LINKS } from "@/lib/siteData";
+
 export default function Footer() {
   return (
     <footer className="bg-smoky-brown border-t border-amber-gold/10 py-12">
@@ -9,9 +11,7 @@ export default function Footer() {
               THE CHICK & THE PIG
             </h3>
             <p className="text-cream/50 text-sm leading-relaxed">
-              Savory fried chicken & BBQ in Algonquin, IL. 
-              Chef Mat&apos;s homemade sauces, smoked meats, 
-              and good vibes. Takeout, delivery & catering.
+              Savory fried chicken, smoked meats, daily specials, catering, and Chef Mat&apos;s sauces. Built around accurate info and the fastest order paths.
             </p>
           </div>
 
@@ -26,12 +26,20 @@ export default function Footer() {
               <a href="#sauces" className="block text-cream/60 hover:text-amber-gold transition-colors text-sm">Chef Mat&apos;s Sauces</a>
               <a href="#catering" className="block text-cream/60 hover:text-amber-gold transition-colors text-sm">Catering</a>
               <a
-                href="https://order.toasttab.com/online/thechickandthepig"
+                href={SITE_LINKS.toast}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block text-cream/60 hover:text-amber-gold transition-colors text-sm"
               >
                 Order Online
+              </a>
+              <a
+                href={SITE_LINKS.giftCards}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="block text-cream/60 hover:text-amber-gold transition-colors text-sm"
+              >
+                Gift Cards
               </a>
             </div>
           </div>
@@ -42,13 +50,19 @@ export default function Footer() {
               Contact
             </h4>
             <div className="space-y-2 text-cream/60 text-sm">
-              <p>📍 1000 N Main Street</p>
-              <p className="pl-6">Algonquin, IL</p>
-              <a href="tel:+18472612222" className="block hover:text-amber-gold transition-colors">
-                📞 (847) 261-2222
+              <p>📍 {BUSINESS.addressLine1}</p>
+              <p className="pl-6">{BUSINESS.addressLine2}</p>
+              <a href={BUSINESS.phoneHref} className="block hover:text-amber-gold transition-colors">
+                📞 {BUSINESS.phoneDisplay}
+              </a>
+              <a href={`mailto:${BUSINESS.email}`} className="block hover:text-amber-gold transition-colors">
+                ✉️ {BUSINESS.email}
+              </a>
+              <a href={`mailto:${BUSINESS.cateringEmail}`} className="block hover:text-amber-gold transition-colors">
+                Catering: {BUSINESS.cateringEmail}
               </a>
               <a
-                href="https://www.facebook.com/p/The-Chick-and-the-Pig-61563163378962/"
+                href={SITE_LINKS.facebook}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="block hover:text-amber-gold transition-colors"
@@ -61,7 +75,7 @@ export default function Footer() {
 
         <div className="border-t border-cream/10 mt-10 pt-6 text-center">
           <p className="text-cream/30 text-xs">
-            © {new Date().getFullYear()} The Chick and The Pig. All rights reserved.
+            © {new Date().getFullYear()} The Chick and The Pig. Order online, buy gift cards, or email catering directly.
           </p>
         </div>
       </div>

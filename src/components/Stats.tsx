@@ -1,13 +1,12 @@
 "use client";
 
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import AnimatedCounter from "./AnimatedCounter";
 
 const stats = [
-  { value: 9, suffix: "", label: "Signature Sauces", icon: "🍯" },
-  { value: 210, suffix: "+", label: "Google Reviews", icon: "⭐" },
-  { value: 7, suffix: "", label: "Daily Specials", icon: "📅" },
-  { value: 4, suffix: ".4★", label: "Star Rating", icon: "🏆" },
+  { value: "9", label: "Sauces & dressings", icon: "🍯" },
+  { value: "7", label: "Daily specials", icon: "📅" },
+  { value: "48h", label: "Lead time for 50+ catering orders", icon: "⏱️" },
+  { value: "3", label: "Fast order paths: Toast, DoorDash, gift cards", icon: "🔥" },
 ];
 
 export default function Stats() {
@@ -33,7 +32,7 @@ export default function Stats() {
                 {stat.icon}
               </div>
               <div className="font-heading text-5xl sm:text-6xl text-amber-gold">
-                <AnimatedCounter end={stat.value} suffix={stat.suffix} />
+                {stat.value}
               </div>
               <p className="text-cream/70 mt-2 text-sm tracking-wide uppercase">
                 {stat.label}

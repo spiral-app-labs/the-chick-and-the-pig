@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://the-chick-and-the-pig.vercel.app"),
   title: "The Chick and The Pig | Fried Chicken & BBQ — Algonquin, IL",
   description:
-    "Savory fried chicken & BBQ in Algonquin, Illinois. Chef Mat's 9 homemade sauces, smoked meats, daily specials, and catering. Order online for takeout & delivery.",
+    "Savory fried chicken and smoked BBQ in Algonquin, Illinois. Daily specials, Chef Mat's sauces, catering, gift cards, Toast ordering, and DoorDash delivery.",
   keywords: [
     "fried chicken",
     "BBQ",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Chick and The Pig | Fried Chicken & BBQ — Algonquin, IL",
     description:
-      "Savory fried chicken & BBQ. Chef Mat's 9 homemade sauces, smoked meats, daily specials. Order online!",
+      "Savory fried chicken, smoked meats, daily specials, catering, and direct order links.",
     url: "https://the-chick-and-the-pig.vercel.app",
     siteName: "The Chick and The Pig",
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Chick and The Pig | Fried Chicken & BBQ",
     description:
-      "Savory fried chicken & BBQ in Algonquin, IL. Chef Mat's homemade sauces. Order online!",
+      "Savory fried chicken and smoked meats in Algonquin, IL. Order online, browse the full menu, or plan catering.",
     images: ["/api/og"],
   },
   robots: {
@@ -72,7 +72,7 @@ export default function RootLayout({
               image:
                 "https://the-chick-and-the-pig.vercel.app/api/og",
               url: "https://the-chick-and-the-pig.vercel.app",
-              telephone: "+18472612222",
+              telephone: "+12243330301",
               address: {
                 "@type": "PostalAddress",
                 streetAddress: "1000 N Main Street",
@@ -88,12 +88,6 @@ export default function RootLayout({
               },
               servesCuisine: ["American", "Barbecue", "Fried Chicken"],
               priceRange: "$-$$",
-              aggregateRating: {
-                "@type": "AggregateRating",
-                ratingValue: "4.4",
-                reviewCount: "210",
-                bestRating: "5",
-              },
               openingHoursSpecification: [
                 {
                   "@type": "OpeningHoursSpecification",
