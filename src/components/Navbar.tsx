@@ -16,7 +16,7 @@ export default function Navbar() {
 
   const navLinks = [
     { href: "#specials", label: "Daily Specials" },
-    { href: "#menu", label: "Menu" },
+    { href: "#menu", label: "Menu Preview" },
     { href: "#sauces", label: "Sauces" },
     { href: "#catering", label: "Catering" },
     { href: "#location", label: "Location" },
@@ -32,7 +32,7 @@ export default function Navbar() {
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 flex items-center justify-between">
         <Link href="/" className="flex items-center gap-2 group">
-          <span className="text-xl sm:text-3xl font-heading text-amber-gold tracking-[0.12em] group-hover:text-white transition-colors">
+          <span className="text-xl sm:text-3xl font-heading text-amber-gold tracking-[0.08em] group-hover:text-white transition-colors">
             THE CHICK & THE PIG
           </span>
         </Link>

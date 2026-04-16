@@ -7,6 +7,8 @@ export const SITE_LINKS = {
   giftCards: "https://squareup.com/gift/MLM8SF7HNT4X0/order",
   facebook: "https://www.facebook.com/p/The-Chick-and-the-Pig-61563163378962/",
   directions: "https://www.google.com/maps/dir//1000+N+Main+St+Algonquin+IL",
+  cateringInquiry:
+    "mailto:catering@thechickandthepig.com?subject=Catering%20Inquiry%20for%20The%20Chick%20and%20The%20Pig",
 } as const;
 
 export const BUSINESS = {
@@ -18,9 +20,22 @@ export const BUSINESS = {
   email: "info@thechickandthepig.com",
   cateringEmail: "catering@thechickandthepig.com",
   heroImage:
-    "https://img.cdn4dd.com/cdn-cgi/image/fit=cover,width=1000,height=300,format=auto,quality=80/https://doordash-static.s3.amazonaws.com/media/store/header/8dedcc81-3f3e-4f3b-b601-fb7c4ae05be4.jpeg",
+    "https://lirp.cdn-website.com/74a6dcdb/dms3rep/multi/opt/1pj0mv7pQHe0mq4wpiMA_bbq-and-fried-chicken.v2.0000000-1920w.jpg",
   note: "Fried chicken, smoked meats, weekly specials, and Chef Mat's sauce shelf.",
 } as const;
+
+export const GALLERY_IMAGES = [
+  {
+    src: "https://lirp.cdn-website.com/74a6dcdb/dms3rep/multi/opt/1pj0mv7pQHe0mq4wpiMA_bbq-and-fried-chicken.v2.0000000-1920w.jpg",
+    alt: "Fried chicken and smoked barbecue from The Chick and The Pig",
+    label: "Chicken and barbecue",
+  },
+  {
+    src: "https://lirp.cdn-website.com/74a6dcdb/dms3rep/multi/opt/i64Td4DCRVCsIcjFrkSb_bbq-ribs.v2.0000000-1920w.jpg",
+    alt: "Hickory smoked ribs from The Chick and The Pig",
+    label: "Hickory smoked ribs",
+  },
+] as const;
 
 export const HOURS = [
   { day: "Monday", time: "11am - 8pm" },
@@ -33,34 +48,34 @@ export const HOURS = [
 ] as const;
 
 export const DAILY_SPECIALS = [
-  { day: "Monday", item: "Pulled Pork Sandwich Meal", price: "$9" },
-  { day: "Tuesday", item: "Fried Chicken Breast Sandwich Meal", price: "$7" },
-  { day: "Wednesday", item: "Burger Meal", price: "$10" },
-  { day: "Thursday", item: "2 Char Dogs Meal", price: "$7" },
-  { day: "Friday", item: "Chopped Brisket Sandwich Meal", price: "$10" },
-  { day: "Saturday", item: "6 Jumbo Chicken Wings Meal", price: "$8" },
-  { day: "Sunday", item: "1/2 Slab Ribs Meal", price: "$18" },
+  { day: "Monday", item: "Pulled Pork Sandwich Meal" },
+  { day: "Tuesday", item: "Fried Chicken Breast Sandwich Meal" },
+  { day: "Wednesday", item: "Burger Meal" },
+  { day: "Thursday", item: "2 Char Dogs Meal" },
+  { day: "Friday", item: "Chopped Brisket Sandwich Meal" },
+  { day: "Saturday", item: "6 Jumbo Chicken Wings Meal" },
+  { day: "Sunday", item: "1/2 Slab Ribs Meal" },
 ] as const;
 
 export const BEST_SELLERS = [
   {
     name: "4pc Fried Chicken Meal",
     price: "$16.50",
-    tag: "DoorDash favorite",
+    tag: "Chicken favorite",
     description:
       "Savory herbs and spices, two 8oz sides, biscuits, and honey butter.",
   },
   {
     name: "1/2 Slab Hickory Smoked Ribs",
     price: "$20.90",
-    tag: "Pit classic",
+    tag: "Smokehouse pick",
     description:
       "Spice-rubbed, hickory smoked, and grilled to order with BBQ sauce.",
   },
   {
     name: "Texas Twinkies",
     price: "$15.40",
-    tag: "Appetizer pick",
+    tag: "Starter to share",
     description:
       "Jalapenos stuffed with brisket and cream cheese, wrapped in bacon.",
   },
@@ -76,7 +91,7 @@ export const BEST_SELLERS = [
 export const MENU_CATEGORIES = [
   {
     name: "Appetizers",
-    accent: "Smoked starters",
+    accent: "Start with the smoke",
     items: [
       "Chicken & Waffle",
       "Texas Twinkies",
@@ -92,6 +107,7 @@ export const MENU_CATEGORIES = [
       "Smoked Chicken Wings",
       "Jumbo Chicken Wings",
       "Fried Chicken Meals",
+      "Boneless Strips",
     ],
   },
   {
@@ -102,16 +118,19 @@ export const MENU_CATEGORIES = [
       "Fried Chicken Breast Sandwich Meal",
       "Burger Meal",
       "Chopped Brisket Sandwich Meal",
+      "Brisket Sandwich",
+      "Pulled Chicken Sandwich",
     ],
   },
   {
-    name: "BBQ by the Pound",
+    name: "Smokehouse",
     accent: "Low and slow",
     items: [
       "1/2 Slab Ribs Meal",
+      "Full Slab Hickory Smoked Ribs",
       "1/2 Lb Meats",
-      "Brats and sausage meals",
-      "Sauces by the jar",
+      "Brats and Sausage Meals",
+      "Smoked Meat Plates",
     ],
   },
   {
@@ -132,6 +151,17 @@ export const MENU_CATEGORIES = [
       "Dessert menu",
       "Can/Bottle Beverages",
       "2 Liters",
+    ],
+  },
+  {
+    name: "Sauces & Extras",
+    accent: "Bring the sauce shelf home",
+    items: [
+      "Original BBQ",
+      "Bourbon Peach BBQ",
+      "Blueberry BBQ",
+      "Ranch and Bleu Cheese",
+      "Take-home jars and add-ons",
     ],
   },
 ] as const;

@@ -16,15 +16,15 @@ export default function Reviews() {
   }, []);
 
   return (
-    <section id="reviews" className="py-20 sm:py-28 bg-white relative overflow-hidden">
+    <section id="reviews" className="relative overflow-hidden bg-white py-20 sm:py-24">
       <div className="max-w-5xl mx-auto px-4 sm:px-6">
         <div ref={ref} className={`text-center mb-16 scroll-animate ${isVisible ? "visible" : ""}`}>
           <p className="text-amber-gold font-medium tracking-[0.2em] uppercase text-sm mb-3">Recent delivery feedback</p>
           <h2 className="font-heading text-5xl sm:text-6xl md:text-7xl text-smoky-brown">
-            WHAT PEOPLE SAY
+            WHAT COMES BACK IN THE ORDERS
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-smoky-light">
-            Trimmed down to sourced recent DoorDash comments instead of generic ratings and placeholder attribution.
+            Recent DoorDash feedback from real orders, with the food that regulars mention most.
           </p>
         </div>
 
