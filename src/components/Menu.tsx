@@ -9,19 +9,19 @@ export default function Menu() {
   const { ref, isVisible } = useScrollAnimation();
 
   return (
-    <section id="menu" className="py-20 sm:py-28 bg-cream relative overflow-hidden">
-      <div className="absolute top-20 left-10 w-64 h-64 bg-amber-gold/5 rounded-full blur-3xl" />
-
+    <section id="menu" className="relative overflow-hidden bg-cream py-20 sm:py-24">
       <div className="max-w-6xl mx-auto px-4 sm:px-6">
         <div ref={ref} className={`text-center mb-16 scroll-animate ${isVisible ? "visible" : ""}`}>
           <p className="text-amber-gold font-medium tracking-[0.2em] uppercase text-sm mb-3">
             Real menu structure
           </p>
           <h2 className="font-heading text-5xl sm:text-6xl md:text-7xl text-smoky-brown">
-            OUR MENU
+            MENU PREVIEW
           </h2>
           <p className="mx-auto mt-4 max-w-3xl text-sm leading-7 text-smoky-light sm:text-base">
-            Rebuilt around the live Toast and DoorDash category structure so the site reflects what guests can actually order: appetizers, wings, sandwiches, smoked meats, sides, desserts, drinks, and sauces by the jar.
+            Browse the categories first, then jump into the live Toast flow for exact pricing,
+            modifiers, and add-ons. The menu stretches from fried chicken dinners and smoked meats
+            to desserts, drinks, and sauce jars.
           </p>
         </div>
 
@@ -41,7 +41,7 @@ export default function Menu() {
           ))}
         </div>
 
-        <div className="bg-white rounded-3xl shadow-xl p-8 sm:p-10 border border-amber-gold/10">
+        <div className="rounded-[2rem] border border-amber-gold/10 bg-white p-8 shadow-[0_24px_60px_rgba(62,39,35,0.08)] sm:p-10">
           <div className="mb-6 flex flex-col gap-3 border-b border-amber-gold/10 pb-6 sm:flex-row sm:items-end sm:justify-between">
             <div>
               <p className="text-xs uppercase tracking-[0.2em] text-amber-gold">
@@ -65,15 +65,15 @@ export default function Menu() {
             {MENU_CATEGORIES[activeCategory].items.map((item) => (
               <div
                 key={item}
-                className="group flex items-start gap-4 p-4 rounded-xl hover:bg-cream transition-colors"
+                className="group flex items-start gap-4 rounded-xl p-4 transition-colors hover:bg-cream"
               >
-                <div className="mt-1 h-3 w-3 rounded-full bg-amber-gold transition-transform group-hover:scale-125" />
+                <div className="mt-1.5 h-2.5 w-2.5 rounded-full bg-bbq-red transition-transform group-hover:scale-125" />
                 <div className="flex-1 border-b border-dashed border-smoky-brown/10 pb-4">
                   <h4 className="font-bold text-smoky-brown text-lg group-hover:text-bbq-red transition-colors">
                     {item}
                   </h4>
                   <p className="text-smoky-light text-sm mt-1">
-                    See live modifiers, sides, and sauce choices in the full ordering flow.
+                    Check Toast for current pricing, sauce choices, and build-your-order details.
                   </p>
                 </div>
               </div>
@@ -81,12 +81,22 @@ export default function Menu() {
           </div>
         </div>
 
-        <div className="mt-10 grid gap-4 sm:grid-cols-3">
+        <div className="mt-10 grid gap-4 lg:grid-cols-[1.2fr_1fr]">
+          <div className="rounded-[1.75rem] bg-smoky-brown p-6 text-cream">
+            <p className="text-xs font-bold uppercase tracking-[0.22em] text-amber-gold">Everyday orders and larger groups</p>
+            <p className="mt-3 text-sm leading-7 text-cream/82">
+              Use Toast or DoorDash when you want lunch, dinner, wings, sandwiches, ribs, and
+              sides right away. For office lunches or larger party counts, head to the catering
+              section and contact the restaurant directly.
+            </p>
+          </div>
+
+          <div className="grid gap-4 sm:grid-cols-3 lg:grid-cols-1">
           <a
             href={SITE_LINKS.toast}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-amber-gold hover:bg-yellow-600 text-smoky-brown px-8 py-4 rounded-full font-bold tracking-wide transition-all hover:scale-105 shadow-lg"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-amber-gold px-8 py-4 font-bold tracking-wide text-smoky-brown transition-all hover:scale-105 hover:bg-yellow-600 shadow-lg"
           >
             Order Toast
           </a>
@@ -94,7 +104,7 @@ export default function Menu() {
             href={SITE_LINKS.doorDash}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 bg-smoky-brown hover:bg-smoky-light text-cream px-8 py-4 rounded-full font-bold tracking-wide transition-all hover:scale-105 shadow-lg"
+            className="inline-flex items-center justify-center gap-2 rounded-full bg-smoky-brown px-8 py-4 font-bold tracking-wide text-cream transition-all hover:scale-105 hover:bg-smoky-light shadow-lg"
           >
             DoorDash Delivery
           </a>
@@ -102,10 +112,11 @@ export default function Menu() {
             href={SITE_LINKS.fullMenu}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center justify-center gap-2 border border-smoky-brown/15 bg-white px-8 py-4 rounded-full font-bold tracking-wide text-smoky-brown transition-all hover:scale-105 shadow-lg"
+            className="inline-flex items-center justify-center gap-2 rounded-full border border-smoky-brown/15 bg-white px-8 py-4 font-bold tracking-wide text-smoky-brown transition-all hover:scale-105 shadow-lg"
           >
             View Full Menu
           </a>
+          </div>
         </div>
       </div>
     </section>

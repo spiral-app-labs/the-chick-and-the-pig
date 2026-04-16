@@ -5,7 +5,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://the-chick-and-the-pig.vercel.app"),
   title: "The Chick and The Pig | Fried Chicken & BBQ — Algonquin, IL",
   description:
-    "Savory fried chicken and smoked BBQ in Algonquin, Illinois. Daily specials, Chef Mat's sauces, catering, gift cards, Toast ordering, and DoorDash delivery.",
+    "Takeout, delivery, and catering-only fried chicken and smoked BBQ in Algonquin, Illinois. Daily specials, Chef Mat's sauces, gift cards, Toast ordering, and DoorDash delivery.",
   keywords: [
     "fried chicken",
     "BBQ",
@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "The Chick and The Pig | Fried Chicken & BBQ — Algonquin, IL",
     description:
-      "Savory fried chicken, smoked meats, daily specials, catering, and direct order links.",
+      "Takeout, delivery, and catering-only fried chicken, smoked meats, daily specials, and direct order links.",
     url: "https://the-chick-and-the-pig.vercel.app",
     siteName: "The Chick and The Pig",
     images: [
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Chick and The Pig | Fried Chicken & BBQ",
     description:
-      "Savory fried chicken and smoked meats in Algonquin, IL. Order online, browse the full menu, or plan catering.",
+      "Takeout, delivery, and catering-only fried chicken and smoked meats in Algonquin, IL. Order online, browse the full menu, or plan catering.",
     images: ["/api/og"],
   },
   robots: {
